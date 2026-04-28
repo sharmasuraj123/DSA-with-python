@@ -1,0 +1,4 @@
+# Traversals:
+  1. Pre order Traversals
+  2. In order Traversals
+  3. Post order Traversals

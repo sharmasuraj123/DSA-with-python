@@ -1,0 +1,122 @@
+🔁 What is Recursion?
+
+Recursion is when a function calls itself to solve a smaller version of the same problem.
+
+🧠 Key Idea:
+
+“Solve a big problem by solving smaller subproblems of the same type.”
+
+📌 Structure of Recursion:
+
+Every recursive function has:
+
+Base Case → stops recursion
+Recursive Case → function calls itself
+✅ Example (Factorial)
+def factorial(n):
+    if n == 0:   # base case
+        return 1
+    return n * factorial(n - 1)  # recursive call
+🔍 How it works:
+factorial(4)
+= 4 * factorial(3)
+= 4 * 3 * factorial(2)
+= 4 * 3 * 2 * factorial(1)
+= 4 * 3 * 2 * 1
+🔙 What is Backtracking?
+
+Backtracking is a special type of recursion where:
+
+You try all possible solutions, and if something goes wrong, you undo (backtrack) and try another path.
+
+🧠 Key Idea:
+
+“Try → Explore → If wrong, Undo → Try next”
+
+✅ Example (Subsets)
+def subsets(idx, path, nums):
+    if idx == len(nums):
+        print(path)
+        return
+    
+    # include element
+    subsets(idx + 1, path + [nums[idx]], nums)
+    
+    # exclude element
+    subsets(idx + 1, path, nums)
+🔍 What happens:
+
+For [1,2], it tries:
+
+[1,2]
+[1]
+[2]
+[]
+
+It explores all possibilities.
+
+⚡ Difference Between Recursion & Backtracking
+Feature 	                                       Recursion	                                    Backtracking
+Definition	                                Function calling itself	                     Recursion + undo choices
+Goal	                                Break problem into smaller parts	              Explore all possibilities
+Undo step	                               ❌ Not required.                                    	✅ Required
+Use case	                            Factorial, Fibonacci	                          N-Queens, Sudoku, Subsets
+
+
+🤔 Why Do We Use Them?
+
+✅ Why Recursion?:=>
+        
+        Problems that are naturally hierarchical
+        Tree/graph traversal
+        Divide & conquer
+        
+        👉 Example:
+        
+        Binary Tree traversal
+        Merge Sort
+
+
+✅ Why Backtracking?
+
+
+When you need all possible answers
+When constraints are involved
+👉 Example:
+           Permutations
+           Combinations
+           N-Queens
+           Sudoku solver
+
+
+
+🧩 Simple Analogy
+Recursion 🪜
+Like going down stairs:
+    “Go down step by step until ground (base case), then return”
+
+
+Backtracking 🚪
+Like trying doors in a maze:
+
+“Open door → if wrong → go back → try another door”
+
+
+🔥 Important Insight
+👉 Backtracking = Recursion + Choice + Undo
+
+🚀 When to Think About Backtracking?
+If question says:
+
+
+“Find all…”
+“Generate all…”
+“Print all possible…”
+“Check all combinations…”
+
+
+👉 💡 Think Backtracking
+If you want, I can show you:
+How to identify backtracking problems instantly
+Step-by-step dry run (your subset code earlier 👀)
+Patterns used in interviews
