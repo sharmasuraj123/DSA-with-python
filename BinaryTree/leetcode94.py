@@ -1,7 +1,8 @@
-def inorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
+def inorderTraversal(self, root):
     if root is None:
         return []
     # using stack
+    
     res, st = [], []
     st.append(root)
     res = []

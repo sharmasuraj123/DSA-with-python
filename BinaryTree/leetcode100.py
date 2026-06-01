@@ -1,4 +1,5 @@
-# # Definition for a binary tree node.
+# # TWO TREES ARE IDENTICAL OR NOT.
+
 # # class TreeNode:
 # #     def __init__(self, val=0, left=None, right=None):
 # #         self.val = val
